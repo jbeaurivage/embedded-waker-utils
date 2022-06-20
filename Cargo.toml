@@ -1,0 +1,24 @@
+[package]
+name = "embedded-waker-utils"
+authors = ["Justin Beaurivage <justin@wearableavionics.com>"]
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+keywords = ["async", "no_std", "embedded", "waker"]
+
+
+[dependencies]
+atomic-polyfill = "0.1.8"
+cortex-m = "0.7.5"
+
+[dependencies.embassy]
+version = "0.1.0"
+git = "https://github.com/embassy-rs/embassy"
+optional = true
+
+[dependencies.cortex-m-rtic]
+version = "1.0"
+optional = true
+
+[features]
+rtic = ["cortex-m-rtic"]
